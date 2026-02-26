@@ -50,6 +50,9 @@ ENV DEBIAN_FRONTEND=noninteractive \
     VNC_PORT=5901 \
     RESOLUTION=1920x1080
 
+# add Mozilla PPA
+RUN add-apt-repository ppa:mozillateam/ppa
+
 # Install system packages
 RUN apt-get update && apt-get install -y \
     # X server and utilities
