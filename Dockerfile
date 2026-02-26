@@ -70,7 +70,7 @@ RUN install -d -m 0755 /etc/apt/keyrings \
         libcanberra-gtk3-module \
         libgles2-mesa-dev \
         dbus-x11 \
-        firefox && \
+        firefox \
     && apt-get clean
 
 # Install system packages
