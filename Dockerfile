@@ -54,7 +54,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 RUN apt-get update && apt-get install -y \
     # X server and utilities
     xvfb \
-    # x11-apps \
+    x11-apps \
     x11-utils \
     # Window manager
     xfce4 \
