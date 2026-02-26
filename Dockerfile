@@ -61,8 +61,8 @@ RUN apt-get update && apt-get install -y \
     xfce4-goodies \
     xfce4-terminal \
     # VNC server
-    # tigervnc-standalone-server \
-    # tigervnc-common \
+    tigervnc-standalone-server \
+    tigervnc-common \
     # noVNC and dependencies
     novnc \
     websockify \
