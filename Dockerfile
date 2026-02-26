@@ -65,11 +65,11 @@ RUN install -d -m 0755 /etc/apt/keyrings && \
     gpg -n -q --import --import-options import-show /etc/apt/keyrings/packages.mozilla.org.asc | awk '/pub/{getline; gsub(/^ +| +$/,""); if($0 == "35BAA0B33E9EB396F59CA838C0BA5CE6DC6315A3") print "\nThe key fingerprint matches ("$0").\n"; else print "\nVerification failed: the fingerprint ("$0") does not match the expected one.\n"}' && \
     echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null && \
     echo 'Package: *\nPin: origin packages.mozilla.org\nPin-Priority: 1000' | tee /etc/apt/preferences.d/mozilla && \
-    apt-get update && apt-get install -y --no-install-recommends \
-        libpci-dev \
-        libcanberra-gtk3-module \
-        libgles2-mesa-dev \
-    apt-get clean
+    # apt-get update && apt-get install -y --no-install-recommends \
+    #     libpci-dev \
+    #     libcanberra-gtk3-module \
+    #     libgles2-mesa-dev \
+    # apt-get clean
 
 # Install system packages
 RUN apt-get update && apt-get install -y \
