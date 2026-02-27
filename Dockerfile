@@ -1,4 +1,5 @@
-FROM public.ecr.aws/earthscope-dev/geolab/geolab-default:agu_wkshp-dc9cd124 AS stage 
+# FROM public.ecr.aws/earthscope-dev/geolab/geolab-default:agu_wkshp-dc9cd124 AS stage 
+FROM public.ecr.aws/earthscope-dev/geolab/geolab-default:virtual_desktop-00000024 AS stage
 
 ENV NB_GID=100
 USER root
@@ -50,9 +51,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     VNC_PORT=5901 \
     RESOLUTION=1920x1080
 
-# add Mozilla PPA
-# System locale
-# Important for UTF-8
+# System locale , important for UTF-8
 ENV LC_ALL=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 ENV LANGUAGE=en_US.UTF-8
