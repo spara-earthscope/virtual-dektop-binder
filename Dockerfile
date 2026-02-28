@@ -22,7 +22,7 @@ RUN apt-get update -qq --yes > /dev/null \
 # RUN yes | unminimize
 
 #install gmt and pygmt from conda-forge
-RUN conda install -c conda-forge --yes gmt pygmt gdal
+RUN conda install -c conda-forge --yes gmt pygmt gdal libsqlite --force-reinstall
 
 # install taup
 WORKDIR /opt
