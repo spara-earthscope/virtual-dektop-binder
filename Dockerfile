@@ -24,7 +24,7 @@ RUN apt-get update -qq --yes > /dev/null \
 # RUN yes | unminimize
 
 #install gmt and pygmt from conda-forge
-RUN conda install -c conda-forge --yes gmt==6.7.0.dev2+8931e47 pygmt
+RUN conda install -c conda-forge --yes gmt==6.6.0 pygmt
 
 # install taup
 WORKDIR /opt
