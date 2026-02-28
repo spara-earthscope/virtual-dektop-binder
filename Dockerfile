@@ -7,7 +7,7 @@ ENV NB_GID=100
 USER root
 
 # temporary fix
-# RUN pip uninstall --yes pygmt 
+RUN pip uninstall --yes pygmt 
 
 #install packages
 RUN apt-get update -qq --yes > /dev/null \
