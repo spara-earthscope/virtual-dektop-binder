@@ -1,7 +1,8 @@
 # FROM public.ecr.aws/earthscope-dev/geolab/geolab-default:agu_wkshp-dc9cd124 AS stage 
 # FROM public.ecr.aws/earthscope-dev/geolab/geolab-default:virtual_desktop-00000024 AS stage
 # FROM geolab:local AS stage
-FROM public.ecr.aws/earthscope-dev/geolab/geolab-default:virtual_desktop-82913607 AS stage
+# FROM public.ecr.aws/earthscope-dev/geolab/geolab-default:virtual_desktop-82913607 AS stage
+FROM pangeo/pangeo-notebook AS stage
 
 ENV NB_GID=100
 USER root
@@ -23,7 +24,7 @@ RUN apt-get update -qq --yes > /dev/null \
 # RUN yes | unminimize
 
 #install gmt and pygmt from conda-forge
-RUN conda install -c conda-forge --yes gmt pygmt
+RUN conda install -c conda-forge --yes gmt==6.7.0.dev2+8931e47 pygmt
 
 # install taup
 WORKDIR /opt
