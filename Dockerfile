@@ -1,6 +1,7 @@
 # FROM public.ecr.aws/earthscope-dev/geolab/geolab-default:agu_wkshp-dc9cd124 AS stage 
 # FROM public.ecr.aws/earthscope-dev/geolab/geolab-default:virtual_desktop-00000024 AS stage
-FROM geolab:local AS stage
+# FROM geolab:local AS stage
+FROM jupyter/base-notebook:latest AS base
 
 ENV NB_GID=100
 USER root
