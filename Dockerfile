@@ -16,13 +16,14 @@ RUN apt-get update -qq --yes > /dev/null \
     && apt-get install man-db --yes \
     && apt-get install openjdk-11-jre-headless --yes \
     && apt-get install xdg-utils --yes \
+    && apt-get install libsqlite3-0 --yes \
     && apt-get clean
 
 # unminimize to install man-db
 # RUN yes | unminimize
 
 #install gmt and pygmt from conda-forge
-RUN conda install -c conda-forge --yes gmt pygmt gdal libsqlite --force-reinstall
+RUN conda install -c conda-forge --yes gmt pygmt
 
 # install taup
 WORKDIR /opt
