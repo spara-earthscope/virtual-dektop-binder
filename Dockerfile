@@ -55,9 +55,9 @@ ENV DEBIAN_FRONTEND=noninteractive \
     RESOLUTION=1920x1080
 
 # System locale , important for UTF-8
-ENV LC_ALL=en_US.UTF-8
-ENV LANG=en_US.UTF-8
-ENV LANGUAGE=en_US.UTF-8
+# ENV LC_ALL=en_US.UTF-8
+# ENV LANG=en_US.UTF-8
+# ENV LANGUAGE=en_US.UTF-8
 
 # Install Firefox and its dependencies
 # https://support.mozilla.org/en-US/kb/install-firefox-linux
